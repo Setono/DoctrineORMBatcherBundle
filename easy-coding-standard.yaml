@@ -1,0 +1,8 @@
+imports:
+    - { resource: 'vendor/symplify/easy-coding-standard/config/set/symfony.yaml' }
+    - { resource: 'vendor/symplify/easy-coding-standard/config/set/symfony-risky.yaml' }
+
+services:
+    PhpCsFixer\Fixer\Import\OrderedImportsFixer: ~
+    PhpCsFixer\Fixer\Strict\DeclareStrictTypesFixer: ~
+    PhpCsFixer\Fixer\ClassNotation\ClassAttributesSeparationFixer: ~
