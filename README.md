@@ -37,18 +37,18 @@ $bundles = [
 ```
 
 ## Usage
-Now you can inject the `BestIdRangeBatcherFactoryInterface` or the `Setono\DoctrineORMBatcher\Query\QueryRebuilderInterface` into your services:
+Now you can inject the `BatcherFactoryInterface` or the `Setono\DoctrineORMBatcher\Query\QueryRebuilderInterface` into your services:
 
 ```php
 <?php
 
-use Setono\DoctrineORMBatcher\Factory\BestIdRangeBatcherFactoryInterface;
+use Setono\DoctrineORMBatcher\Factory\BatcherFactoryInterface;
 
 final class YourService
 {
     private $factory;
     
-    public function __construct(BestIdRangeBatcherFactoryInterface $factory)
+    public function __construct(BatcherFactoryInterface $factory)
     {
         $this->factory = $factory;
     }
@@ -63,7 +63,7 @@ With auto wiring this will work out of the box. If you're not using auto wiring 
 <container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
     <services>
         <service id="YourService">
-            <argument type="service" id="Setono\DoctrineORMBatcher\Factory\BestIdRangeBatcherFactoryInterface"/>
+            <argument type="service" id="Setono\DoctrineORMBatcher\Factory\BatcherFactoryInterface"/>
         </service>
     </services>
 </container>

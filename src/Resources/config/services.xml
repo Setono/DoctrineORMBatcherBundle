@@ -2,8 +2,8 @@
 
 <container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
     <services>
-        <service id="Setono\DoctrineORMBatcher\Factory\BestIdRangeBatcherFactoryInterface" alias="setono_doctrine_orm_batcher.factory.best_id_range_batcher"/>
-        <service id="setono_doctrine_orm_batcher.factory.best_id_range_batcher" class="Setono\DoctrineORMBatcher\Factory\BestIdRangeBatcherFactory"/>
+        <service id="Setono\DoctrineORMBatcher\Factory\BatcherFactoryInterface" alias="setono_doctrine_orm_batcher.factory.batcher"/>
+        <service id="setono_doctrine_orm_batcher.factory.batcher" class="Setono\DoctrineORMBatcher\Factory\BatcherFactory"/>
 
         <service id="Setono\DoctrineORMBatcher\Query\QueryRebuilderInterface" alias="setono_doctrine_orm_batcher.query.rebuilder"/>
         <service id="setono_doctrine_orm_batcher.query.rebuilder" class="Setono\DoctrineORMBatcher\Query\QueryRebuilder">
