@@ -1,12 +1,37 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
-    <services>
-        <service id="Setono\DoctrineORMBatcher\Factory\BatcherFactoryInterface" alias="setono_doctrine_orm_batcher.factory.batcher"/>
-        <service id="setono_doctrine_orm_batcher.factory.batcher" class="Setono\DoctrineORMBatcher\Factory\BatcherFactory"/>
+<container xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://symfony.com/schema/dic/services"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <parameters>
+        <parameter key="setono_doctrine_orm_batcher.batcher.id_collection.class">
+            Setono\DoctrineORMBatcher\Batcher\Collection\IdCollectionBatcher
+        </parameter>
+        <parameter key="setono_doctrine_orm_batcher.batcher.object_collection.class">
+            Setono\DoctrineORMBatcher\Batcher\Collection\ObjectCollectionBatcher
+        </parameter>
+        <parameter key="setono_doctrine_orm_batcher.batcher.naive_id_range.class">
+            Setono\DoctrineORMBatcher\Batcher\Range\NaiveIdRangeBatcher
+        </parameter>
+        <parameter key="setono_doctrine_orm_batcher.batcher.id_range.class">
+            Setono\DoctrineORMBatcher\Batcher\Range\IdRangeBatcher
+        </parameter>
+    </parameters>
 
-        <service id="Setono\DoctrineORMBatcher\Query\QueryRebuilderInterface" alias="setono_doctrine_orm_batcher.query.rebuilder"/>
-        <service id="setono_doctrine_orm_batcher.query.rebuilder" class="Setono\DoctrineORMBatcher\Query\QueryRebuilder">
+    <services>
+        <service id="Setono\DoctrineORMBatcher\Factory\BatcherFactoryInterface"
+                 alias="setono_doctrine_orm_batcher.factory.batcher"/>
+        <service id="setono_doctrine_orm_batcher.factory.batcher"
+                 class="Setono\DoctrineORMBatcher\Factory\BatcherFactory">
+            <argument>%setono_doctrine_orm_batcher.batcher.object_collection.class%</argument>
+            <argument>%setono_doctrine_orm_batcher.batcher.id_collection.class%</argument>
+            <argument>%setono_doctrine_orm_batcher.batcher.naive_id_range.class%</argument>
+            <argument>%setono_doctrine_orm_batcher.batcher.id_range.class%</argument>
+        </service>
+
+        <service id="Setono\DoctrineORMBatcher\Query\QueryRebuilderInterface"
+                 alias="setono_doctrine_orm_batcher.query.rebuilder"/>
+        <service id="setono_doctrine_orm_batcher.query.rebuilder"
+                 class="Setono\DoctrineORMBatcher\Query\QueryRebuilder">
             <argument type="service" id="doctrine"/>
         </service>
     </services>
