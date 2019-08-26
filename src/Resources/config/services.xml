@@ -3,18 +3,10 @@
 <container xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://symfony.com/schema/dic/services"
            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
     <parameters>
-        <parameter key="setono_doctrine_orm_batcher.batcher.id_collection.class">
-            Setono\DoctrineORMBatcher\Batcher\Collection\IdCollectionBatcher
-        </parameter>
-        <parameter key="setono_doctrine_orm_batcher.batcher.object_collection.class">
-            Setono\DoctrineORMBatcher\Batcher\Collection\ObjectCollectionBatcher
-        </parameter>
-        <parameter key="setono_doctrine_orm_batcher.batcher.naive_id_range.class">
-            Setono\DoctrineORMBatcher\Batcher\Range\NaiveIdRangeBatcher
-        </parameter>
-        <parameter key="setono_doctrine_orm_batcher.batcher.id_range.class">
-            Setono\DoctrineORMBatcher\Batcher\Range\IdRangeBatcher
-        </parameter>
+        <parameter key="setono_doctrine_orm_batcher.batcher.id_collection.class">Setono\DoctrineORMBatcher\Batcher\Collection\IdCollectionBatcher</parameter>
+        <parameter key="setono_doctrine_orm_batcher.batcher.object_collection.class">Setono\DoctrineORMBatcher\Batcher\Collection\ObjectCollectionBatcher</parameter>
+        <parameter key="setono_doctrine_orm_batcher.batcher.naive_id_range.class">Setono\DoctrineORMBatcher\Batcher\Range\NaiveIdRangeBatcher</parameter>
+        <parameter key="setono_doctrine_orm_batcher.batcher.id_range.class">Setono\DoctrineORMBatcher\Batcher\Range\IdRangeBatcher</parameter>
     </parameters>
 
     <services>
