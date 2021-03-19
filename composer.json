@@ -9,12 +9,12 @@
     ],
     "license": "MIT",
     "require": {
-        "php": "^7.2",
+        "php": ">=7.2",
         "doctrine/doctrine-bundle": "^1.0 || ^2.0",
         "setono/doctrine-orm-batcher": "^0.6",
-        "symfony/config": "^4.0",
-        "symfony/dependency-injection": "^4.0",
-        "symfony/framework-bundle": "^4.0"
+        "symfony/config": "^4.4 || ^5.0",
+        "symfony/dependency-injection": "^4.4 || ^5.0",
+        "symfony/framework-bundle": "^4.4 || ^5.0"
     },
     "require-dev": {
         "localheinz/composer-normalize": "^1.1",
