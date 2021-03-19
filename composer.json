@@ -9,7 +9,7 @@
     ],
     "license": "MIT",
     "require": {
-        "php": "^7.2",
+        "php": ">=7.2",
         "doctrine/doctrine-bundle": "^1.0 || ^2.0",
         "setono/doctrine-orm-batcher": "^0.6",
         "symfony/config": "^4.0 || ^5.0",
