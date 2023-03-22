@@ -12,22 +12,25 @@
         "php": ">=7.2",
         "doctrine/doctrine-bundle": "^1.0 || ^2.0",
         "setono/doctrine-orm-batcher": "^0.6",
-        "symfony/config": "^4.4 || ^5.0",
-        "symfony/dependency-injection": "^4.4 || ^5.0",
-        "symfony/framework-bundle": "^4.4 || ^5.0"
+        "symfony/config": "^4.4 || ^5.0 || ^6.0",
+        "symfony/dependency-injection": "^4.4 || ^5.0 || ^6.0",
+        "symfony/framework-bundle": "^4.4 || ^5.0 || ^6.0"
     },
     "require-dev": {
         "localheinz/composer-normalize": "^2.13",
         "matthiasnoback/symfony-dependency-injection-test": "^4.0",
-        "phpstan/phpstan": "^0.11",
-        "phpstan/phpstan-strict-rules": "^0.11",
+        "phpstan/phpstan": "^0.11 || ^1.0",
+        "phpstan/phpstan-strict-rules": "^0.11 || ^1.0",
         "phpunit/phpunit": "^8.0",
         "roave/security-advisories": "dev-master",
-        "symplify/easy-coding-standard": "^6.0",
+        "symplify/easy-coding-standard": ">=6.0",
         "thecodingmachine/phpstan-safe-rule": "^1.0.1"
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "localheinz/composer-normalize": true
+        }
     },
     "extra": {
         "branch-alias": {
