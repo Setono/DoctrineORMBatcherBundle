@@ -9,12 +9,12 @@
     ],
     "license": "MIT",
     "require": {
-        "php": ">=7.2",
-        "doctrine/doctrine-bundle": "^1.0 || ^2.0",
+        "php": ">=8.2",
+        "doctrine/doctrine-bundle": "^1.0 || ^2.0 || ^3.0",
         "setono/doctrine-orm-batcher": "^0.6",
-        "symfony/config": "^4.4 || ^5.0 || ^6.0",
-        "symfony/dependency-injection": "^4.4 || ^5.0 || ^6.0",
-        "symfony/framework-bundle": "^4.4 || ^5.0 || ^6.0"
+        "symfony/config": "^5.4 || ^6.4 || ^7.4 || ^8.0",
+        "symfony/dependency-injection": "^5.4 || ^6.4 || ^7.4 || ^8.0",
+        "symfony/framework-bundle": "^5.4 || ^6.4 || ^7.4 || ^8.0"
     },
     "require-dev": {
         "localheinz/composer-normalize": "^2.13",
